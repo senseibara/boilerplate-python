@@ -2,15 +2,8 @@
 
 from .context import boilerplate_python
 
-import unittest
+import pytest
 
 
-class AdvancedTestSuite(unittest.TestCase):
-    """Advanced test cases."""
-
-    def test_thoughts(self):
-        self.assertIsNone(sample.hmm())
-
-
-if __name__ == '__main__':
-    unittest.main()
+def test_thoughts():
+    assert (boilerplate_python.hmm()) is None
